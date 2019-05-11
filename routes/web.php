@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('export', 'CandidateController@export')->name('export');
+Route::get('importExportView', 'CandidateController@importExportView');
+Route::post('import', 'CandidateController@import')->name('import');
